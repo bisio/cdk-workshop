@@ -23,5 +23,6 @@ export class HitCounter extends cdk.Construct {
                 HITS_TABLE_NAME: table.tableName
             }
         });
+        table.grantReadWriteData(this.handler);
     }
 }
