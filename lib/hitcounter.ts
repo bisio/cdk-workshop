@@ -19,7 +19,7 @@ export class HitCounter extends cdk.Construct {
             handler: 'hitcounter.handler',
             code: lambda.Code.fromAsset('lambda'),
             environment: {
-                DOWSTREAM_FUNCTION_NAME: props.downstream.functionName,
+                DOWNSTREAM_FUNCTION_NAME: props.downstream.functionName,
                 HITS_TABLE_NAME: table.tableName
             }
         });
